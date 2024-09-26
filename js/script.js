@@ -16,7 +16,7 @@ async function loadTasks() {
 // Function to display tasks in the UI
 function displayTasks() {
 	tasks.forEach(currentTask => {
-		document.getElementById("task-list").innerHTML = `
+		document.getElementById("task-list").innerHTML += `
 		<li>${currentTask.task}</li>
 		`;
 	});
