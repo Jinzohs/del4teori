@@ -38,7 +38,8 @@ function handleEvent(eventType, taskId) {
       break;
 
     case 'remove':
-
+		tasks = tasks.filter(task => task.id !== taskID);
+		displayTasks();
       break;
 
     default:
