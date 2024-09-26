@@ -1,0 +1,21 @@
+[
+{
+"id": 1,
+"task": "Städa rummet",
+"completed" : false
+},
+{
+"id": 1,
+"task": "Borsta tänderna",
+"completed" : false
+},
+
+{
+"id": 1,
+"task": "Koka kvällsgröt",
+"completed" : false
+}
+
+
+
+]
