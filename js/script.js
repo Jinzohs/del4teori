@@ -17,7 +17,7 @@ async function loadTasks() {
 function displayTasks() {
 	tasks.forEach(currentTask => {
 		document.getElementById("task-list").innerHTML = `
-		<li>${currentTask.tas}</li>
+		<li>${currentTask.task}</li>
 		`;
 	});
 }
