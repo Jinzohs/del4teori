@@ -38,7 +38,7 @@ function handleEvent(eventType, taskId) {
       break;
 
     case 'remove':
-		tasks = tasks.filter(task => task.id !== taskID);
+		tasks = tasks.filter(task => task.id !== taskId);
 		displayTasks();
       break;
 
