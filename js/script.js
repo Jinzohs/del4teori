@@ -7,7 +7,6 @@ async function loadTasks() {
 	 let response = await fetch("tasks.json");
 	 let data = await response.text();
 	 tasks = JSON.parse(data);
-	 console.log(data);
 	}
 	catch(error){
 		console.error('Fel vid inladdning av uppgifter',error);
@@ -16,7 +15,10 @@ async function loadTasks() {
 
 // Function to display tasks in the UI
 function displayTasks() {
-
+	tasks.forEach(currentTask => {
+		document.getElementById("task-list").innerHTML = `
+		<li>${currentTask.task</li>`;
+	});
 }
 
 // Function to handle different events using switch statement
