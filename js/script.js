@@ -17,7 +17,7 @@ async function loadTasks() {
 function displayTasks() {
 	tasks.forEach(currentTask => {
 		document.getElementById("task-list").innerHTML += `
-		<li>${currentTask.task}</li>
+		<li>${currentTask.task} <button onclick="handleEvent('remove', currentTask.id)">Remove</button></li>
 		`;
 	});
 }
