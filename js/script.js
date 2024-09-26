@@ -5,11 +5,12 @@ let tasks = [];
 async function loadTasks() {
 	try{
 	 let response = await fetch("tasks.json");
-	 let data = await response.json();
+	 let data = await response.text();
+	 tasks = JSON.parse(data);
 	 console.log(data);
 	}
 	catch(error){
-		
+		console.error('Fel vid inladdning av uppgifter',error);
 	}
 }
 
