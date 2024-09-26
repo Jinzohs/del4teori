@@ -15,9 +15,10 @@ async function loadTasks() {
 
 // Function to display tasks in the UI
 function displayTasks() {
+	document.getElementById("task-list").innerHTML = "";
 	tasks.forEach(currentTask => {
 		document.getElementById("task-list").innerHTML += `
-		<li>${currentTask.task} <button onclick="handleEvent('remove', currentTask.id)">Remove</button></li>
+		<li>${currentTask.task} <button onclick="handleEvent('remove', ${currentTask.id})">Remove</button></li>
 		`;
 	});
 }
@@ -26,15 +27,17 @@ function displayTasks() {
 function handleEvent(eventType, taskId) {
   switch (eventType) {
     case 'add':
-      
-
+     let newTaskDesc = document.getElementById('new-task').value; 
+	const newTask = {
+		id: tasks.length + 1,
+		task: newTaskDesc,
+		completed: false
+	}
+	tasks.push(newTask);
+	displayTasks();
       break;
 
     case 'remove':
-
-      break;
-
-    case 'complete':
 
       break;
 
